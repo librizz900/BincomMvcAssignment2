@@ -1,0 +1,34 @@
+﻿@model BincomMvcAssignment2.Models.TaxResult
+
+@{
+    ViewData["Title"] = "Tax Result";
+}
+
+<h2>Tax Calculation Result</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Monthly Income</th>
+        <td>₦@Model.MonthlyIncome.ToString("N2")</td>
+    </tr>
+    <tr>
+        <th>Annual Income</th>
+        <td>₦@Model.AnnualIncome.ToString("N2")</td>
+    </tr>
+    <tr>
+        <th>Taxable Income</th>
+        <td>₦@Model.TaxableIncome.ToString("N2")</td>
+    </tr>
+    <tr>
+        <th>Tax Payable</th>
+        <td>₦@Model.TaxPayable.ToString("N2")</td>
+    </tr>
+    <tr>
+        <th>Net Annual Income</th>
+        <td>₦@Model.NetAnnualIncome.ToString("N2")</td>
+    </tr>
+</table>
+
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Calculate Again</a>
+</p>
